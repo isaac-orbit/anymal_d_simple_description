@@ -12,12 +12,12 @@
       </geometry>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 0.016"/>
+      <origin rpy="0 0 0" xyz="0 0 0.066"/>
       <geometry>
-        <box size="0.894 0.1615 0.256"/>
+        <box size="0.894 0.1615 0.356"/>
       </geometry>
     </collision>
-    <collision>
+    <!-- <collision>
       <origin rpy="0 1.5707963267948966 0" xyz="0.23529999999999995 0.08075 0"/>
       <geometry>
         <cylinder length="0.1482" radius="0.089"/>
@@ -40,7 +40,7 @@
       <geometry>
         <cylinder length="0.1482" radius="0.089"/>
       </geometry>
-    </collision>
+    </collision> -->
   </link>
   <joint name="base_to_base_inertia" type="fixed">
     <parent link="base"/>
@@ -438,12 +438,12 @@
         <mesh filename="package://anymal_d_simple_description/meshes/lidar_guard.dae"/>
       </geometry>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
         <cylinder length="0.1355" radius="0.07"/>
       </geometry>
-    </collision>
+    </collision> -->
     <inertial>
       <origin rpy="0.0 0.0 0.0" xyz="-0.00371 -0.00326 -0.00485"/>
       <mass value="0.9017"/>
@@ -520,12 +520,12 @@
         <mesh filename="package://anymal_d_simple_description/meshes/drive.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin rpy="0 1.5707963267948966 0" xyz="-0.0595 0 0"/>
       <geometry>
         <cylinder length="0.119" radius="0.05375"/>
       </geometry>
-    </collision>
+    </collision> -->
     <inertial>
       <origin rpy="0 0 0" xyz="-0.05783 -0.00014 0.00036"/>
       <mass value="2.01511"/>
@@ -564,12 +564,12 @@
         <mesh filename="package://anymal_d_simple_description/meshes/thigh.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-        <collision>
+        <!-- <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0.10519500000000001 0"/>
       <geometry>
         <cylinder length="0.08313000000000001" radius="0.07"/>
       </geometry>
-    </collision>
+    </collision> -->
     <collision>
       <origin rpy="0 0 0" xyz="0 0.09513 -0.1425"/>
       <geometry>
@@ -577,9 +577,9 @@
       </geometry>
     </collision>
     <collision>
-      <origin rpy="1.5707963267948966 0 0" xyz="0 0.08506500000000002 -0.285"/>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0.12506500000000002 -0.285"/>
       <geometry>
-        <cylinder length="0.08313000000000001" radius="0.07"/>
+        <cylinder length="0.16313000000000001" radius="0.07"/>
       </geometry>
     </collision>
     <inertial>
@@ -600,12 +600,12 @@
         <mesh filename="package://anymal_d_simple_description/meshes/drive.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin rpy="0 1.5707963267948966 0" xyz="-0.0595 0 0"/>
       <geometry>
         <cylinder length="0.119" radius="0.05375"/>
       </geometry>
-    </collision>
+    </collision> -->
     <inertial>
       <origin rpy="0 0 0" xyz="-0.05783 -0.00014 0.00036"/>
       <mass value="2.01511"/>
@@ -639,16 +639,22 @@
         <mesh filename="package://anymal_d_simple_description/meshes/shank_l.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-        <collision>
+    <!-- <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
       <geometry>
         <cylinder length="0.05732" radius="0.071"/>
       </geometry>
-    </collision>
-    <collision>
+    </collision> -->
+    <!-- <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0.066415 0 0"/>
       <geometry>
         <box size="0.13283 0.08302 0.05732"/>
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin rpy="0 0 0" xyz="0.1 0.005358847 -0.164216803"/>
+      <geometry>
+        <cylinder length="0.39572" radius="0.0175"/>
       </geometry>
     </collision>
     <inertial>
@@ -657,7 +663,7 @@
       <inertia ixx="0.00054939614" ixy="2.147115e-05" ixz="1.687902e-05" iyy="0.00166971314" iyz="1.71584e-06" izz="0.00127258622"/>
     </inertial>
   </link>
-  <joint name="LF_shank_fixed_LF_FOOT" type="fixed">
+  <joint name="LF_shank_fixed_LF_FOOT" type="fixed" dont_collapse="true">
     <parent link="LF_shank_fixed"/>
     <child link="LF_FOOT"/>
     <origin rpy="0 0 0" xyz="0.1 0.02225 -0.39246"/>
@@ -669,12 +675,6 @@
         <mesh filename="package://anymal_d_simple_description/meshes/foot.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-        <collision>
-      <origin rpy="0 0 0" xyz="0 -0.016891153063699788 0.22824319686592265"/>
-      <geometry>
-        <cylinder length="0.39572" radius="0.0175"/>
-      </geometry>
-    </collision>
         <collision>
       <origin xyz="0 -0.008141153063699788 0.03038319686592264"/>
       <geometry>
@@ -757,12 +757,12 @@
         <mesh filename="package://anymal_d_simple_description/meshes/drive.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin rpy="0 1.5707963267948966 0" xyz="-0.0595 0 0"/>
       <geometry>
         <cylinder length="0.119" radius="0.05375"/>
       </geometry>
-    </collision>
+    </collision> -->
     <inertial>
       <origin rpy="0 0 0" xyz="-0.05783 -0.00014 0.00036"/>
       <mass value="2.01511"/>
@@ -801,12 +801,12 @@
         <mesh filename="package://anymal_d_simple_description/meshes/thigh.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-        <collision>
+        <!-- <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0 -0.10519500000000001 0"/>
       <geometry>
         <cylinder length="0.08313000000000001" radius="0.07"/>
       </geometry>
-    </collision>
+    </collision> -->
     <collision>
       <origin rpy="0 0 0" xyz="0 -0.09513 -0.1425"/>
       <geometry>
@@ -814,9 +814,9 @@
       </geometry>
     </collision>
     <collision>
-      <origin rpy="1.5707963267948966 0 0" xyz="0 -0.08506500000000002 -0.285"/>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 -0.12506500000000002 -0.285"/>
       <geometry>
-        <cylinder length="0.08313000000000001" radius="0.07"/>
+        <cylinder length="0.16313000000000001" radius="0.07"/>
       </geometry>
     </collision>
     <inertial>
@@ -837,12 +837,12 @@
         <mesh filename="package://anymal_d_simple_description/meshes/drive.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin rpy="0 1.5707963267948966 0" xyz="-0.0595 0 0"/>
       <geometry>
         <cylinder length="0.119" radius="0.05375"/>
       </geometry>
-    </collision>
+    </collision> -->
     <inertial>
       <origin rpy="0 0 0" xyz="-0.05783 -0.00014 0.00036"/>
       <mass value="2.01511"/>
@@ -876,16 +876,22 @@
         <mesh filename="package://anymal_d_simple_description/meshes/shank_r.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-        <collision>
+        <!-- <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
       <geometry>
         <cylinder length="0.05732" radius="0.071"/>
       </geometry>
-    </collision>
-    <collision>
+    </collision> -->
+    <!-- <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0.066415 0 0"/>
       <geometry>
         <box size="0.13283 0.08302 0.05732"/>
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin rpy="0 0 0" xyz="0.1 -0.005358847 -0.164216803"/>
+      <geometry>
+        <cylinder length="0.39572" radius="0.0175"/>
       </geometry>
     </collision>
     <inertial>
@@ -894,7 +900,7 @@
       <inertia ixx="0.00054939614" ixy="-2.147115e-05" ixz="1.687902e-05" iyy="0.00166971314" iyz="-1.71584e-06" izz="0.00127258622"/>
     </inertial>
   </link>
-  <joint name="RF_shank_fixed_RF_FOOT" type="fixed">
+  <joint name="RF_shank_fixed_RF_FOOT" type="fixed" dont_collapse="true">
     <parent link="RF_shank_fixed"/>
     <child link="RF_FOOT"/>
     <origin rpy="0 0 0" xyz="0.1 -0.02225 -0.39246"/>
@@ -906,12 +912,6 @@
         <mesh filename="package://anymal_d_simple_description/meshes/foot.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-        <collision>
-      <origin rpy="0 0 0" xyz="0 0.016891153063699788 0.22824319686592265"/>
-      <geometry>
-        <cylinder length="0.39572" radius="0.0175"/>
-      </geometry>
-    </collision>
         <collision>
       <origin xyz="0 0.008141153063699788 0.03038319686592264"/>
       <geometry>
@@ -994,12 +994,12 @@
         <mesh filename="package://anymal_d_simple_description/meshes/drive.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin rpy="0 1.5707963267948966 0" xyz="-0.0595 0 0"/>
       <geometry>
         <cylinder length="0.119" radius="0.05375"/>
       </geometry>
-    </collision>
+    </collision> -->
     <inertial>
       <origin rpy="0 0 0" xyz="-0.05783 -0.00014 0.00036"/>
       <mass value="2.01511"/>
@@ -1038,12 +1038,12 @@
         <mesh filename="package://anymal_d_simple_description/meshes/thigh.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-        <collision>
+        <!-- <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0.10519500000000001 0"/>
       <geometry>
         <cylinder length="0.08313000000000001" radius="0.07"/>
       </geometry>
-    </collision>
+    </collision> -->
     <collision>
       <origin rpy="0 0 0" xyz="0 0.09513 -0.1425"/>
       <geometry>
@@ -1051,9 +1051,9 @@
       </geometry>
     </collision>
     <collision>
-      <origin rpy="1.5707963267948966 0 0" xyz="0 0.08506500000000002 -0.285"/>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0.12506500000000002 -0.285"/>
       <geometry>
-        <cylinder length="0.08313000000000001" radius="0.07"/>
+        <cylinder length="0.16313000000000001" radius="0.07"/>
       </geometry>
     </collision>
     <inertial>
@@ -1074,12 +1074,12 @@
         <mesh filename="package://anymal_d_simple_description/meshes/drive.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin rpy="0 1.5707963267948966 0" xyz="-0.0595 0 0"/>
       <geometry>
         <cylinder length="0.119" radius="0.05375"/>
       </geometry>
-    </collision>
+    </collision> -->
     <inertial>
       <origin rpy="0 0 0" xyz="-0.05783 -0.00014 0.00036"/>
       <mass value="2.01511"/>
@@ -1113,16 +1113,22 @@
         <mesh filename="package://anymal_d_simple_description/meshes/shank_r.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-        <collision>
+        <!-- <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
       <geometry>
         <cylinder length="0.05732" radius="0.071"/>
       </geometry>
-    </collision>
-    <collision>
+    </collision> -->
+    <!-- <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="-0.066415 0 0"/>
       <geometry>
         <box size="0.13283 0.08302 0.05732"/>
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.1 0.005358847 -0.164216803"/>
+      <geometry>
+        <cylinder length="0.39572" radius="0.0175"/>
       </geometry>
     </collision>
     <inertial>
@@ -1131,7 +1137,7 @@
       <inertia ixx="0.00054939614" ixy="-2.147115e-05" ixz="-1.687902e-05" iyy="0.00166971314" iyz="1.71584e-06" izz="0.00127258622"/>
     </inertial>
   </link>
-  <joint name="LH_shank_fixed_LH_FOOT" type="fixed">
+  <joint name="LH_shank_fixed_LH_FOOT" type="fixed" dont_collapse="true">
     <parent link="LH_shank_fixed"/>
     <child link="LH_FOOT"/>
     <origin rpy="0 0 0" xyz="-0.1 0.02225 -0.39246"/>
@@ -1143,12 +1149,6 @@
         <mesh filename="package://anymal_d_simple_description/meshes/foot.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-        <collision>
-      <origin rpy="0 0 0" xyz="0 -0.016891153063699788 0.22824319686592265"/>
-      <geometry>
-        <cylinder length="0.39572" radius="0.0175"/>
-      </geometry>
-    </collision>
         <collision>
       <origin xyz="0 -0.008141153063699788 0.03038319686592264"/>
       <geometry>
@@ -1231,12 +1231,12 @@
         <mesh filename="package://anymal_d_simple_description/meshes/drive.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin rpy="0 1.5707963267948966 0" xyz="-0.0595 0 0"/>
       <geometry>
         <cylinder length="0.119" radius="0.05375"/>
       </geometry>
-    </collision>
+    </collision> -->
     <inertial>
       <origin rpy="0 0 0" xyz="-0.05783 -0.00014 0.00036"/>
       <mass value="2.01511"/>
@@ -1275,12 +1275,12 @@
         <mesh filename="package://anymal_d_simple_description/meshes/thigh.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-        <collision>
+        <!-- <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0 -0.10519500000000001 0"/>
       <geometry>
         <cylinder length="0.08313000000000001" radius="0.07"/>
       </geometry>
-    </collision>
+    </collision> -->
     <collision>
       <origin rpy="0 0 0" xyz="0 -0.09513 -0.1425"/>
       <geometry>
@@ -1288,9 +1288,9 @@
       </geometry>
     </collision>
     <collision>
-      <origin rpy="1.5707963267948966 0 0" xyz="0 -0.08506500000000002 -0.285"/>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 -0.12506500000000002 -0.285"/>
       <geometry>
-        <cylinder length="0.08313000000000001" radius="0.07"/>
+        <cylinder length="0.16313000000000001" radius="0.07"/>
       </geometry>
     </collision>
     <inertial>
@@ -1311,12 +1311,12 @@
         <mesh filename="package://anymal_d_simple_description/meshes/drive.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin rpy="0 1.5707963267948966 0" xyz="-0.0595 0 0"/>
       <geometry>
         <cylinder length="0.119" radius="0.05375"/>
       </geometry>
-    </collision>
+    </collision> -->
     <inertial>
       <origin rpy="0 0 0" xyz="-0.05783 -0.00014 0.00036"/>
       <mass value="2.01511"/>
@@ -1350,16 +1350,22 @@
         <mesh filename="package://anymal_d_simple_description/meshes/shank_l.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-        <collision>
+    <!-- <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="0 0 0"/>
       <geometry>
         <cylinder length="0.05732" radius="0.071"/>
       </geometry>
-    </collision>
-    <collision>
+    </collision> -->
+    <!-- <collision>
       <origin rpy="1.5707963267948966 0 0" xyz="-0.066415 0 0"/>
       <geometry>
         <box size="0.13283 0.08302 0.05732"/>
+      </geometry>
+    </collision> -->
+    <collision>
+      <origin rpy="0 0 0" xyz="-0.1 -0.005358847 -0.164216803"/>
+      <geometry>
+        <cylinder length="0.39572" radius="0.0175"/>
       </geometry>
     </collision>
     <inertial>
@@ -1368,7 +1374,7 @@
       <inertia ixx="0.00054939614" ixy="2.147115e-05" ixz="-1.687902e-05" iyy="0.00166971314" iyz="-1.71584e-06" izz="0.00127258622"/>
     </inertial>
   </link>
-  <joint name="RH_shank_fixed_RH_FOOT" type="fixed">
+  <joint name="RH_shank_fixed_RH_FOOT" type="fixed" dont_collapse="true">
     <parent link="RH_shank_fixed"/>
     <child link="RH_FOOT"/>
     <origin rpy="0 0 0" xyz="-0.1 -0.02225 -0.39246"/>
@@ -1380,12 +1386,6 @@
         <mesh filename="package://anymal_d_simple_description/meshes/foot.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
-        <collision>
-      <origin rpy="0 0 0" xyz="0 0.016891153063699788 0.22824319686592265"/>
-      <geometry>
-        <cylinder length="0.39572" radius="0.0175"/>
-      </geometry>
-    </collision>
         <collision>
       <origin xyz="0 0.008141153063699788 0.03038319686592264"/>
       <geometry>
@@ -1400,132 +1400,22 @@
   </link>
 
 <!-- If no Inspection payload is mounted, this cover protects the open hatch. -->
-<!--  <joint name="base_to_hatch" type="fixed">-->
-<!--    <parent link="base"/>-->
-<!--    <child link="hatch"/>-->
-<!--    <origin rpy="0 0 0" xyz="0.14253 0.0 0.092"/>-->
-<!--  </joint>-->
-<!--  <link name="hatch">-->
-<!--    <visual>-->
-<!--      <origin rpy="0 0 0" xyz="0 0 0"/>-->
-<!--      <geometry>-->
-<!--        <mesh filename="package://anymal_d_simple_description/meshes/hatch.dae" scale="1.0 1.0 1.0"/>-->
-<!--      </geometry>-->
-<!--    </visual>-->
-<!--    <inertial>-->
-<!--      <origin rpy="0 0 0" xyz="0.06631 0.00 0.01119"/>-->
-<!--      <mass value="0.09653"/>-->
-<!--      <inertia ixx="0.00019173168" ixy="0.00002292922" ixz="0.00000308205" iyy="0.00144879520" iyz="0.00000584565" izz="0.00162332503"/>-->
-<!--    </inertial>-->
-<!--  </link>-->
-
-  <!-- Inspection Payload -->
-  <joint name="base_to_inspection_payload_mount" type="fixed">
+  <joint name="base_to_hatch" type="fixed">
     <parent link="base"/>
-    <child link="inspection_payload_mount"/>
+    <child link="hatch"/>
     <origin rpy="0 0 0" xyz="0.14253 0.0 0.092"/>
   </joint>
-  <link name="inspection_payload_mount">
+  <link name="hatch">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://anymal_d_simple_description/meshes/mount.dae" scale="1 1 1"/>
+        <mesh filename="package://anymal_d_simple_description/meshes/hatch.dae" scale="1.0 1.0 1.0"/>
       </geometry>
     </visual>
     <inertial>
-      <origin rpy="0 0 0" xyz="0.00290 0.00 0.01050"/>
-      <mass value="0.21580"/>
-      <inertia ixx="0.00023461260" ixy="0.00000000486" ixz="0.00000355757" iyy="0.00020272719" iyz="0.00000000936" izz="0.00040505639"/>
-    </inertial>
-    <collision>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <box size="0.16 0.135 0.015"/>
-      </geometry>
-    </collision>
-  </link>
-  <joint name="inspection_payload_mount_to_pan" type="revolute">
-    <parent link="inspection_payload_mount"/>
-    <child link="inspection_payload_pan"/>
-    <limit effort="20" lower="-2.6" upper="2.6" velocity="2"/>
-    <origin rpy="0 0 0" xyz="0 0 0.023"/>
-    <axis xyz="0 0 1"/>
-    <dynamics damping="0.05" friction="0.01"/>
-  </joint>
-  <link name="inspection_payload_pan">
-    <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <mesh filename="package://anymal_d_simple_description/meshes/pan.dae" scale="1 1 1"/>
-      </geometry>
-    </visual>
-    <inertial>
-      <origin rpy="0 0 0" xyz="0.00068 -0.00349 0.07578"/>
-      <mass value="3.18886"/>
-      <inertia ixx="0.02661619524" ixy="0.00040736245" ixz="0.00195095864" iyy="0.01515399107" iyz="0.00077034252" izz="0.02200752038"/>
-    </inertial>
-    <collision>
-      <origin rpy="0 0 0" xyz="0.0 0.0 0.125"/>
-      <geometry>
-        <box size="0.18 0.24 0.21"/>
-      </geometry>
-    </collision>
-  </link>
-  <joint name="inspection_payload_pan_to_tilt" type="revolute">
-    <parent link="inspection_payload_pan"/>
-    <child link="inspection_payload_tilt"/>
-    <limit effort="20" lower="-1.570796" upper="1.570796" velocity="2"/>
-    <origin rpy="0 0 0" xyz="0.03 0 0.152"/>
-    <axis xyz="0 1 0"/>
-    <dynamics damping="0.1" friction="0.5"/>
-  </joint>
-  <link name="inspection_payload_tilt">
-    <visual>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <geometry>
-        <mesh filename="package://anymal_d_simple_description/meshes/tilt.dae" scale="1 1 1"/>
-      </geometry>
-    </visual>
-    <inertial>
-      <origin rpy="0 0 0" xyz="0.00534 -0.00379 -0.00091"/>
-      <mass value="2.084"/>
-      <inertia ixx="0.00743579757" ixy="0.00006988521" ixz="0.00003254125" iyy="0.00619264016" iyz="0.00002659381" izz="0.00593296152"/>
+      <origin rpy="0 0 0" xyz="0.06631 0.00 0.01119"/>
+      <mass value="0.09653"/>
+      <inertia ixx="0.00019173168" ixy="0.00002292922" ixz="0.00000308205" iyy="0.00144879520" iyz="0.00000584565" izz="0.00162332503"/>
     </inertial>
   </link>
-  <joint name="inspection_payload_tilt_to_head" type="fixed">
-    <parent link="inspection_payload_tilt"/>
-    <child link="inspection_payload_head"/>
-    <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
-  </joint>
-  <link name="inspection_payload_head"/>
-  <joint name="inspection_payload_head_to_camera" type="fixed">
-    <parent link="inspection_payload_head"/>
-    <child link="inspection_payload_camera"/>
-    <origin rpy="-1.57079633 0 -1.57079633" xyz="0.055 -0.023 0.031"/>
-  </joint>
-  <link name="inspection_payload_camera"/>
-  <joint name="inspection_payload_head_to_thermal_camera" type="fixed">
-    <parent link="inspection_payload_head"/>
-    <child link="inspection_payload_thermal_camera"/>
-    <origin rpy="-1.57079633 0 -1.57079633" xyz="0.06840 -0.02300 -0.03000"/>
-  </joint>
-  <link name="inspection_payload_thermal_camera"/>
-  <joint name="inspection_payload_head_to_light" type="fixed">
-    <parent link="inspection_payload_head"/>
-    <child link="inspection_payload_light"/>
-    <origin rpy="-1.57079633 0 -1.57079633" xyz="0.05495 0.03000 0.03116"/>
-  </joint>
-  <link name="inspection_payload_light"/>
-  <joint name="inspection_payload_head_to_microphone" type="fixed">
-    <parent link="inspection_payload_head"/>
-    <child link="inspection_payload_microphone"/>
-    <origin rpy="-1.57079633 0 -1.57079633" xyz="0.06840 0.02300 -0.03000"/>
-  </joint>
-  <link name="inspection_payload_microphone"/>
-  <joint name="inspection_payload_mount_to_camera_default" type="fixed">
-    <parent link="inspection_payload_mount"/>
-    <child link="inspection_payload_camera_default"/>
-    <origin rpy="0 0 0" xyz="0.0 0.0 0.175"/>
-  </joint>
-  <link name="inspection_payload_camera_default"/>
 </robot>
