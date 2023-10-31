@@ -41,13 +41,6 @@
         <cylinder length="0.1482" radius="0.089"/>
       </geometry>
     </collision> -->
-  </link>
-  <joint name="base_to_base_inertia" type="fixed">
-    <parent link="base"/>
-    <child link="base_inertia"/>
-    <origin rpy="0 0 0" xyz="0 0 0"/>
-  </joint>
-  <link name="base_inertia">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.02148 0.00173 -0.04417"/>
       <mass value="8.27629"/>
